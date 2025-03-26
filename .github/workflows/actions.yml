@@ -17,6 +17,9 @@ jobs:
         run: chmod +x gradlew
       - name: Build and test
         working-directory: PROG_DISTRIB/TP_DOCKER/rent
+
+        working-directory: PROG_DISTRIB\TP_DOCKER\rent
+
         run: |
           export SHELL=/bin/bash
           ./gradlew build
