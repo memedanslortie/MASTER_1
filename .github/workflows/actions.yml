@@ -13,7 +13,7 @@ jobs:
           java-version: '21'
           distribution: 'adopt'
       - name: Build and test
-        working-directory: rent
+        working-directory: TP_DOCKER/rent
         run: |
           export SHELL=/bin/bash
           ./gradlew build
