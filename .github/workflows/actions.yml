@@ -13,15 +13,15 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Make Gradle wrapper executable
-        working-directory: PROG_DISTRIB\TP_DOCKER\rent
+        working-directory: PROG_DISTRIB/TP_DOCKER/rent
         run: chmod +x gradlew
       - name: Build and test
-        working-directory: PROG_DISTRIB\TP_DOCKER\rent
+        working-directory: PROG_DISTRIB/TP_DOCKER/rent
         run: |
           export SHELL=/bin/bash
           ./gradlew build
       - name: Docker images
-        working-directory: PROG_DISTRIB\TP_DOCKER\rent
+        working-directory: PROG_DISTRIB/TP_DOCKER/rent
         run: |
           export SHELL=/bin/bash
           docker build -t rent .
